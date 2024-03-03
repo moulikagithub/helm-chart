@@ -7,7 +7,7 @@ metadata:
      demo: helm
 
 spec:
-  replicas: 3
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
         app: nginx
@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx:{{ .Values.deployment.imageVersion }}
         ports:
         - containerPort: 80
