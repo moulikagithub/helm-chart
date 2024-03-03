@@ -4,19 +4,19 @@ metadata:
   name: nginx
   labels:
      app: nginx
-     teir: deployement
+     demo: helm
 
 spec:
   replicas: 3
   selector:
     matchLabels:
         app: nginx
-        teir: deployement
+        demo: helm
   template:
     metadata:
       labels:
         app: nginx
-        teir: deployement
+        demo: helm
     spec:
       containers:
       - name: nginx
